@@ -1,0 +1,69 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true // .gitignoreに指定されたファイルを無視する
+  },
+  "files": {
+    "ignoreUnknown": false, // Biome がサポートしていないファイルも診断対象とする
+    "includes": ["src/**/*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 120
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error", // 未使用のimportをエラーとして報告
+        "noUnusedVariables": "error" // 未使用の変数をエラーとして報告
+      }
+    },
+    "domains": {
+      "next": "recommended",
+      "react": "recommended"
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double"
+    }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        // import文の順序設定
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              { "type": true }, // type インポート
+              ":BLANK_LINE:",
+
+              ":URL:", // 外部URL
+              ":NODE:", // Nodeビルトインモジュール
+              ["react", "react/**", "next", "next/**"], // React と Next.js のコアモジュール
+              ":PACKAGE:", // npm パッケージ
+              ":BLANK_LINE:",
+
+              ["~/app/**", "~/components/**", "~/lib/**", "~/**"], // エイリアス経由のモジュール
+              ":BLANK_LINE:",
+
+              ["../**"], // 相対パスのインポート
+              ["./**"],
+              ":BLANK_LINE:",
+
+              ["**/*.module.css", "**/*.css", "**/*.scss", "**/*.less"], // スタイル関連のインポート
+              ":BLANK_LINE:"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
