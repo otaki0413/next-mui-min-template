@@ -21,6 +21,9 @@
       "correctness": {
         "noUnusedImports": "error", // 未使用のimportをエラーとして報告
         "noUnusedVariables": "error" // 未使用の変数をエラーとして報告
+      },
+      "style": {
+        "useBlockStatements": "error" // if文などでブロックを省略しない
       }
     },
     "domains": {
