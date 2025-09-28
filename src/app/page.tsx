@@ -12,7 +12,7 @@ export default function Home() {
           alt="Next.js logo"
           width={180}
           height={38}
-          priority
+          priority={true}
         />
         <ol>
           <li>
@@ -54,7 +54,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <Image
-            aria-hidden
+            aria-hidden={true}
             src="/file.svg"
             alt="File icon"
             width={16}
@@ -68,7 +68,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <Image
-            aria-hidden
+            aria-hidden={true}
             src="/window.svg"
             alt="Window icon"
             width={16}
@@ -82,7 +82,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <Image
-            aria-hidden
+            aria-hidden={true}
             src="/globe.svg"
             alt="Globe icon"
             width={16}
