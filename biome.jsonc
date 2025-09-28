@@ -25,12 +25,7 @@
       "style": {
         "useBlockStatements": "error", // if文などでブロックを省略しない
         "useImportType": "error", // type importsを適切に使用
-        "useSelfClosingElements": {
-          "level": "error", // 子要素がないJSX要素に自己終了タグを強制
-          "options": {
-            "ignoreHtmlElements": true // ネイティブなHTML要素は無視
-          }
-        },
+        "useSelfClosingElements": "error", // 子要素がないJSX要素に自己閉じタグを使用
         "useConsistentCurlyBraces": "error", // オブジェクトリテラルで一貫した中括弧使用
         "useConsistentArrayType": "error", // 配列型をT[]形式に統一
         "noImplicitBoolean": "error" // JSXでの暗黙的なboolean属性を禁止
@@ -43,8 +38,8 @@
       }
     },
     "domains": {
-      "next": "recommended",
-      "react": "recommended"
+      "next": "recommended", // Next.js向けの推奨ルールを有効化
+      "react": "recommended" // React向けの推奨ルールを有効化
     }
   },
   "javascript": {
