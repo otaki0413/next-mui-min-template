@@ -23,7 +23,23 @@
         "noUnusedVariables": "error" // 未使用の変数をエラーとして報告
       },
       "style": {
-        "useBlockStatements": "error" // if文などでブロックを省略しない
+        "useBlockStatements": "error", // if文などでブロックを省略しない
+        "useImportType": "error", // type importsを適切に使用
+        "useSelfClosingElements": {
+          "level": "error", // 子要素がないJSX要素に自己終了タグを強制
+          "options": {
+            "ignoreHtmlElements": true // ネイティブなHTML要素は無視
+          }
+        },
+        "useConsistentCurlyBraces": "error", // オブジェクトリテラルで一貫した中括弧使用
+        "useConsistentArrayType": "error", // 配列型をT[]形式に統一
+        "noImplicitBoolean": "error" // JSXでの暗黙的なboolean属性を禁止
+      },
+      "suspicious": {
+        "noExplicitAny": "error" // any型を禁止
+      },
+      "a11y": {
+        "recommended": true // アクセシビリティルールを有効化
       }
     },
     "domains": {
