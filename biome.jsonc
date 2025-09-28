@@ -60,7 +60,8 @@
 
               ":URL:", // 外部URL
               ":NODE:", // Nodeビルトインモジュール
-              ["react", "react/**", "next", "next/**"], // React と Next.js のコアモジュール
+              ["react", "react/**"], // React のコアモジュール
+              ["next", "next/**"], // Next.js のコアモジュール
               ":PACKAGE:", // npm パッケージ
               ":BLANK_LINE:",
 
