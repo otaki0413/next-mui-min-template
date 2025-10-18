@@ -5,5 +5,8 @@
     "source.organizeImports.biome": "explicit",
     "source.fixAll.biome": "explicit"
   },
-  "biome.lsp.bin": "./node_modules/.bin/biome"
+  "biome.lsp.bin": "./node_modules/.bin/biome",
+  "cSpell.words": [
+    "turbopack"
+  ]
 }
